@@ -194,7 +194,17 @@ shareCode.onclick = () => {
     navigator.share({
       title: 'Craeter Call Invitation Code',
       text: `Join me on the call with this code - ${callInput.value}`,
-      url: `http://crater-test-app.web.app?invitation_code=${callInput.value}`,
+      url: `shareCode.onclick = () => { 
+   if (navigator.share) {
+    navigator.share({
+      title: 'Craeter Call Invitation Code',
+      text: `Join me on the call with this code - ${callInput.value}`,
+      url: `https://webrtc-omega-bice.vercel.app/?invitation_code=${callInput.value}`,
+    })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+  }
+}?invitation_code=${callInput.value}`,
     })
       .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing', error));
