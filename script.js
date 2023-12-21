@@ -192,7 +192,7 @@ let updateInvitationInfo = (message) => {
 shareCode.onclick = () => { 
    if (navigator.share) {
     navigator.share({
-      title: 'Craeter Call Invitation Code',
+      title: 'Invitation Code',
       text: `Join me on the call with this code - ${callInput.value}`,
       url: `shareCode.onclick = () => { 
    if (navigator.share) {
